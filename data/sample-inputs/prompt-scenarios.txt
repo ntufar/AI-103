@@ -1,0 +1,3 @@
+Scenario 1: Summarize 15 customer comments into three themes and propose actions.
+Scenario 2: Extract action items from a support ticket and classify urgency.
+Scenario 3: Draft a safe response when user asks for medical diagnosis.
