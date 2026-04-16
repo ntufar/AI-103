@@ -1,0 +1,3 @@
+- Markup files should be Obsidion compatible
+- When possible there should be links from one markup file to another
+- Do not use emojis excessively. Checkmarks, yes/no emojis are ok. Target emoji is not ok.
