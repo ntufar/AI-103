@@ -239,7 +239,7 @@ function validateEmail(email) {
 - Know why it was suggested
 - Explain to code reviewers
 - Document non-obvious parts
-- Use `gh copilot explain` to learn
+- Use `copilot help` or `copilot -p` to learn
 
 ### 3. Responsible Deployment
 **Principle:** Review security and safety before deploying

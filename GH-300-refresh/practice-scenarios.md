@@ -313,7 +313,7 @@ A developer on your team struggles with complex bash commands. They ask if Copil
 **Question:** What's the best Copilot solution?
 
 A) Chat in IDE to ask about bash syntax
-B) Use Copilot CLI with `gh copilot explain` to understand commands first
+B) Use Copilot CLI and ask it to explain the command first
 C) Search GitHub documentation
 D) Ask on Stack Overflow
 
@@ -323,24 +323,24 @@ D) Ask on Stack Overflow
 
 ### Solution: Scenario 7
 
-**Correct Answer: B) Use Copilot CLI with `gh copilot explain`**
+**Correct Answer: B) Use Copilot CLI and ask it to explain the command first**
 
 **Why:**
 - Direct, IDE-independent solution
 - Explains actual commands before running (safer)
 - Faster than searching docs
 - Works in terminal context
-- Can also use `gh copilot suggest` for new commands
+- Can also use `copilot -p` for a one-off explanation
 
 **How it works:**
 ```
 # Understand a command
-gh copilot explain "git rebase -i HEAD~3"
+copilot -p "Explain what git rebase -i HEAD~3 does"
 
-# Get suggestions for a task
-gh copilot suggest
-> What would you like to do?
-> [describe task]
+# Start an interactive session
+copilot
+/login
+> Explain what `git rebase -i HEAD~3` does
 ```
 
 **Why not others:**
@@ -350,8 +350,9 @@ gh copilot suggest
 
 **Setup (if needed):**
 ```
-gh extension install github/gh-copilot
-gh copilot auth login
+npm install -g @github/copilot
+copilot
+/login
 ```
 
 **Benefits:**
@@ -545,7 +546,7 @@ Use this pattern: [example]"
 4. **Responsibility is yours** - Copilot is tool, you validate
 5. **Plans have limits** - Know what's available at each tier
 6. **Duplication = information** - Not a blocker, you decide
-7. **CLI for terminal** - `gh copilot explain` before running
+7. **CLI for terminal** - Use `copilot` before running commands
 8. **Policies enforce standards** - Instructions + code review
 9. **Licenses matter** - Understand implications
 10. **Iterate prompts** - First try often not perfect, refine

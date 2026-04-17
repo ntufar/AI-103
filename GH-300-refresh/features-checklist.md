@@ -27,12 +27,12 @@ Use this as a quick reminder of features, where they're available, and what they
 
 ### Copilot Chat Panel
 - **What:** Interactive conversation with Copilot in sidebar/pane
-- **How to Trigger:** Ctrl+L (Windows) or Cmd+L (Mac)
+- **How to Trigger:** Open the chat view in your IDE (shortcut varies by IDE)
 - **Features:**
   - Reference files with `@filename`
   - Use slash commands: `/explain`, `/fix`, `/tests`, `/refactor`, `/doc`
   - Multiple turns in conversation thread
-  - Custom instructions via `.github/copilot-instructions.md`
+  - Custom instructions via `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md`
 - **Availability:** All Copilot plans
 - **Best For:** Complex requests, multi-step tasks, explanations
 
@@ -114,18 +114,19 @@ Use this as a quick reminder of features, where they're available, and what they
 
 ## CLI Features (Command Line)
 
-### GitHub Copilot CLI (`gh copilot`)
-- **Installation:** `gh extension install github/gh-copilot`
-- **Auth:** `gh copilot auth login`
+### GitHub Copilot CLI (`copilot`)
+- **Installation:** `npm install -g @github/copilot` (or `brew install copilot-cli` / `winget install GitHub.Copilot`)
+- **Auth:** Start `copilot` and run `/login`
 
 #### Key Commands:
 
 | Command | What it does | Example |
 |---------|-------------|---------|
-| `gh copilot explain` | Explains what a command does | `gh copilot explain "git rebase -i"` |
-| `gh copilot suggest` | Get command suggestions | `gh copilot suggest` then describe what you want |
-| `-t shell` flag | Specify shell suggestions | `gh copilot suggest -t shell` |
-| Interactive mode | Multi-turn conversation | Start with `gh copilot suggest` and keep chatting |
+| `copilot` | Start interactive Copilot CLI | `copilot` |
+| `/login` | Authenticate in the CLI | Run after starting `copilot` |
+| `-p` flag | Run a single prompt non-interactively | `copilot -p "Explain git rebase -i"` |
+| `-s` flag | Output only the response | `copilot -sp "Summarize this repo"` |
+| `/help` | Show available commands | `copilot` then `/help` |
 
 **Benefits:**
 - Don't need to search docs for command syntax
@@ -154,13 +155,13 @@ Use this as a quick reminder of features, where they're available, and what they
 
 ### Code Review Policies
 - **Define:** Review standards organization-wide
-- **Configure:** Via `instructions.md` files
+- **Configure:** Via `.github/copilot-instructions.md` and path-specific `.github/instructions/*.instructions.md` files
 - **Enforce:** Review requirements per repository
 - **Track:** Via audit logs
 
 ### Instruction Files
 - **Location 1:** `.github/copilot-instructions.md` (org-wide)
-- **Location 2:** `.copilot/instructions.md` (repo-specific)
+- **Location 2:** `.github/instructions/NAME.instructions.md` (path-specific)
 - **Contains:**
   - Naming conventions
   - Code style preferences
@@ -309,8 +310,8 @@ customer_data.json
 - **Edit existing code targeted?** → Edit Mode (Pro+)
 - **Build from scratch?** → Spark (Pro+) or Agent Mode (Pro+)
 - **Review my code for issues?** → Code Review
-- **Explain a shell command?** → CLI `gh copilot explain`
-- **Get a command suggestion?** → CLI `gh copilot suggest`
+- **Explain a shell command?** → CLI `copilot` with a prompt or `-p`
+- **Get a command suggestion?** → CLI `copilot` with a prompt or `-p`
 - **Document my pull request?** → PR Summary (Pro+)
 - **Enforce standards org-wide?** → Instructions + Policies (Business+)
 

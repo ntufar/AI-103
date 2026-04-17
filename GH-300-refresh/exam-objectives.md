@@ -70,10 +70,10 @@ type: comprehensive-guide
   - Subscribe to appropriate plan (Pro, Business, Enterprise)
 
 - **Triggering Copilot:**
-  - **Inline Suggestions:** Start typing, Copilot auto-suggests (Ctrl+Enter to accept)
-  - **Chat:** Open Chat panel (Ctrl+L on Windows, Cmd+L on Mac)
-  - **CLI:** Use `gh copilot` commands in terminal
-  - **Plan Mode:** Plan code structure before implementation
+   - **Inline Suggestions:** Start typing, Copilot auto-suggests (Ctrl+Enter to accept)
+   - **Chat:** Open the chat panel in your IDE (shortcut varies by IDE)
+   - **CLI:** Use the `copilot` terminal app
+   - **Plan Mode:** Plan code structure before implementation
 
 - **File/Repository Exclusions:**
   - Configure `.copilotignore` file
@@ -90,16 +90,18 @@ type: comprehensive-guide
   - Reduces context switching in terminal-heavy workflows
 
 - **Installation Steps:**
-  - Install GitHub CLI (`gh`) first
-  - Authenticate: `gh auth login`
-  - Install Copilot extension: `gh extension install github/gh-copilot`
-  - Authenticate to Copilot: `gh copilot auth login`
+  - Install GitHub Copilot CLI: `npm install -g @github/copilot` (Node.js 22+)
+  - Or install via Homebrew: `brew install copilot-cli`
+  - Start Copilot: `copilot`
+  - Authenticate in the CLI: `/login`
+  - Use `gh auth login` only if you need GitHub CLI as the fallback auth source
 
 - **Key Commands:**
-  - `gh copilot explain <command>` - Explain what a command does
-  - `gh copilot suggest` - Get command suggestions
-  - `gh copilot suggest -t shell` - Get shell/PowerShell suggestions
-  - Interactive mode for multi-turn conversations
+  - `copilot` - Start an interactive session
+  - `/login` - Authenticate with GitHub
+  - `copilot -p "<prompt>"` - Run a single prompt non-interactively
+  - `copilot -sp "<prompt>"` - Return only Copilot's response
+  - `/help` - Show available commands and shortcuts
 
 - **Usage Patterns:**
   - Interactive sessions for complex tasks
@@ -176,7 +178,7 @@ type: comprehensive-guide
 
 - **Instructions Files:**
   - `.github/copilot-instructions.md` for org-wide guidelines
-  - `.copilot/instructions.md` for repo-specific guidance
+  - `.github/instructions/NAME.instructions.md` for path-specific guidance
   - Define naming conventions, patterns, security rules
   - Override defaults with custom instructions
 

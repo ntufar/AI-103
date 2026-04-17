@@ -191,9 +191,9 @@ data/customers/
 - **Agent Mode** = Auto-modify multiple files (Pro+)
 - **Duplication Detection** = Post-processing check for license issues
 - **.copilotignore** = Exclude files from Copilot
-- **Instruction Files** = .github/copilot-instructions.md (org standards)
+- **Instruction Files** = .github/copilot-instructions.md + .github/instructions/*.instructions.md
 - **Business Plan** = Contractual no-training + audit logs
-- **CLI** = Terminal: gh copilot explain/suggest
+- **CLI** = Terminal: `copilot`, `/login`, and `copilot -p`
 - **Code Review** = Copilot reviews PRs (Business+)
 - **Responsible AI** = Validate, test, review, document
 

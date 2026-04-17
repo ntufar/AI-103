@@ -126,7 +126,6 @@ type: deep-dive
 
 **File Locations:**
 - Project root: `.copilotignore`
-- Subdirectory: `.copilot/.copilotignore`
 
 **Syntax:** Like `.gitignore`
 
@@ -241,7 +240,7 @@ user_data.json
 
 **Phase 2: Prompt Construction**
 1. System prompt + user context combined
-2. Any custom instructions added (from `.github/copilot-instructions.md`)
+2. Any custom instructions added (from `.github/copilot-instructions.md` or `.github/instructions/*.instructions.md`)
 3. Organization policies applied
 4. Token limit checked (usually 8K-16K tokens)
 
