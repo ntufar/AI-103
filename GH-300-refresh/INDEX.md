@@ -9,7 +9,8 @@ type: index
 # GH-300 GitHub Copilot Certificate - Study Materials Index
 
 **Exam Date:** April 17, 2026  
-**Total Study Materials:** 9 comprehensive guides
+**Total Study Materials:** 14 comprehensive guides  
+**Last Updated:** April 17, 2026 - Added enterprise/org management coverage
 
 ---
 
@@ -42,6 +43,16 @@ type: index
 | [[data-privacy-guide]] | Data flow, privacy settings, safeguards | 30 min | 10-15% |
 | [[responsible-ai-notes]] | Ethical principles, risks, validation | 35 min | 15-20% |
 | [[practice-scenarios]] | 10 real-world scenarios with solutions | 25 min | Practice |
+
+### Enterprise & Organization Management (New - Key Exam Topics)
+
+| Guide | Topic Area | Duration | Exam Weight |
+|-------|-----------|----------|------------|
+| [[enterprise-management]] | **Organization management, licensing, policies, agents** | 40 min | **20-25%** |
+| [[audit-logs-guide]] | **Audit logs, compliance, monitoring, retention** | 35 min | **15-20%** |
+| [[file-exclusions-guide]] | **Content exclusions, `.copilotignore`, guardrails** | 30 min | **15-20%** |
+| [[api-insights-guide]] | **API usage, metrics, insights, compliance reporting** | 25 min | **10-15%** |
+| [[chat-commands-guide]] | **Copilot Chat commands, `/help`, `/test`, agents** | 20 min | **10-15%** |
 
 ---
 

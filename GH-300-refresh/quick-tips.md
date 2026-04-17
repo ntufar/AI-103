@@ -1,8 +1,8 @@
 ---
 title: GH-300 Exam - Quick Tips & Cheat Sheet
-tags: [gh-300, quick-reference, exam-tips, high-yield, last-minute, cheat-sheet]
+tags: [gh-300, quick-reference, exam-tips, high-yield, last-minute, cheat-sheet, enterprise, management]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-17
 type: quick-reference
 ---
 
@@ -182,7 +182,94 @@ data/customers/
 
 ---
 
-## Last-Minute Review (Read 30 mins before exam)
+## NEW: Enterprise & Organization Management (April 17 Update)
+
+**EXAM UPDATE:** GH-300 heavily tests enterprise features - know these!
+
+### Quick Facts: Organization Licensing
+
+| Concept | What to Know |
+|---------|-------------|
+| **Who controls license** | Enterprise Owner or Org Owner |
+| **Audit logs retention** | 180 days (then deleted unless exported) |
+| **Can disable Chat** | Yes - via org policies (affects all users) |
+| **Can exclude files** | Yes - `.copilotignore` (repo) + policy (org) |
+| **Agent mode usage** | Can limit to specific repos |
+
+### Slash Commands You Must Know
+
+| Command | What It Does | Exam Q Pattern |
+|---------|------------|----------------|
+| `/test` | Generate unit tests | "What generates tests?" → `/test` |
+| `/help` | Get Copilot help | "Learn about Copilot features" |
+| `/new` | Start conversation | "Clear context for new topic" |
+| `/fix` | Fix code | "Improve buggy code" |
+| `/review` | Review code | "Security/quality audit" |
+
+**Remember:** Type `/` in chat to see all available commands (varies by IDE)
+
+### Content Exclusions (2 Types)
+
+```
+Type 1: Local .copilotignore
+  └── Repo root (not .copilot-ignore or copilot.ignore)
+  └── Like .gitignore format
+  └── Prevents Copilot seeing those files
+
+Type 2: Enterprise Policy
+  └── Admin sets at org/enterprise level
+  └── Enforced for all teams
+  └── Overrides repo settings
+```
+
+**Exam question type:** "How to prevent Copilot from seeing secrets?"
+**Answer:** Add to .copilotignore OR enable enterprise content exclusion policy
+
+### Audit Logs Quick Reference
+
+```
+What's tracked:
+  ✅ License assignments/removals
+  ✅ Policy changes
+  ✅ Custom agent lifecycle
+  ✅ Who did it + when
+
+What's NOT tracked:
+  ❌ Individual prompts (privacy)
+  ❌ Code suggestions
+  ❌ Chat messages
+
+Retention: 180 days (then deleted)
+  → Need long-term? Stream to external system
+```
+
+### Copilot Business vs. Enterprise
+
+| Feature | Business | Enterprise |
+|---------|----------|-----------|
+| License management | ✅ | ✅ |
+| Audit logs | ✅ | ✅ |
+| Org-level policies | ✅ | ✅ |
+| Custom agents | ❌ | ✅ |
+| Content exclusion policy | Limited | Full |
+| Model customization | ❌ | ✅ |
+| Full feature control | Limited | ✅ |
+
+**Exam tip:** "Enterprise features" questions = Copilot Enterprise only
+
+---
+
+## Links to Full Guides (New Apr 17)
+
+**For detailed coverage, read these guides:**
+
+- [[enterprise-management]] - Organizations, licensing, policies, agents
+- [[audit-logs-guide]] - What logs contain, retention, compliance
+- [[file-exclusions-guide]] - .copilotignore, patterns, guardrails  
+- [[api-insights-guide]] - Metrics, usage data, compliance reporting
+- [[chat-commands-guide]] - All slash commands, modes, usage
+
+---
 
 **Scan these keywords:**
 
