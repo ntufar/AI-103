@@ -1,0 +1,15 @@
+# Normalize line endings so editors (Obsidian, VS Code, etc.) and Git agree on Windows.
+# With core.autocrlf=true, Git otherwise checks out CRLF; Obsidian commonly saves LF.
+
+* text=auto
+
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+
+# Raw exports / binaries: do not touch line endings
+raw/** -text
